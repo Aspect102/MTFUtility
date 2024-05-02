@@ -1,0 +1,20 @@
+Listen up, Test Subjects.
+You may not go toward the SCP until the door is shut behind you.
+You must maintain a safe distance from the observation window to ensure there is no accidental infection.
+Understood?
+
+Listen up, Civil Personnel.
+You must follow all orders given by Beta-7 Operatives.
+You must maintain a safe distance from the observation window to ensure there is no accidental infection.
+You must remain within the observation area for the entirety of the test.
+The only exception being if any infected Class-Ds attempt to break into the observation area, at which point you may exit the chamber.
+You may not call Red Fox in the event of an outbreak.
+Understood?
+
+Listen up, Security Personnel.
+You must create a line behind the Class-D entering the chamber, ensuring not to get too close to it.
+You must maintain a safe distance from the observation window to ensure there is no accidental infection.
+In the event of a containment breach, you are to terminate all participating Class-D and exit the chamber.
+In the event of a containment breach, after terminating any remaining Class-D you are to exit the chamber and guard the exterior door to ensure there are no trespassers.
+You may not call Red Fox in the event of a containment breach.
+Understood?

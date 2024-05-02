@@ -1,0 +1,63 @@
+﻿<Window x:Class="MTFUtility.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MTFUtility"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="596" Width="939">
+    <Viewbox Stretch="Fill" StretchDirection="Both">
+        <Grid Height="596" Width="939">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55*"/>
+                <RowDefinition Height="541*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Mobile Task Force: Beta-7 Utility Tool" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="257" Height="33" FontWeight="Bold" FontSize="14"/>
+            <TabControl Margin="0,51,0,0" Grid.RowSpan="2">
+                <TabItem Header="Testing Checker">
+                    <Grid Background="#FFE5E5E5">
+                        <Button Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="27" Width="151" Click="Button_Click_1"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="SCP Briefs">
+                    <Grid Background="#FFE5E5E5">
+                        <ComboBox x:Name="combox_scpselector" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+                            <ComboBoxItem Content="SCP-409" Name="SCP409"/>
+                            <ComboBoxItem Content="SCP-008" Name="SCP008"/>
+                            <ComboBoxItem Content="SCP-173" Name="SCP173"/>
+                            <ComboBoxItem Content="SCP-310" Name="SCP310"/>
+                            <ComboBoxItem Content="SCP-606" Name="SCP606"/>
+                            <ComboBoxItem Content="SCP-914" Name="SCP914"/>
+                            <ComboBoxItem Content="SCP-457" Name="SCP457"/>
+                            <ComboBoxItem Content="SCP-106" Name="SCP106"/>
+                            <ComboBoxItem Content="SCP-096" Name="SCP096"/>
+                        </ComboBox>
+                        <ListBox x:Name="listbox_testsubjects" Margin="10,67,10,296"/>
+                        <ListBox x:Name="listbox_civil" Margin="10,210,10,153"/>
+                        <ListBox x:Name="listbox_security" Margin="10,353,10,10"/>
+                        <Button Content="Begin Paste" HorizontalAlignment="Left" Margin="177,14,0,0" VerticalAlignment="Top" Width="91" Height="41" Click="Button_Click"/>
+                        <StackPanel Margin="466,5,333,439">
+                            <StackPanel.Resources>
+                                <Style TargetType="{x:Type RadioButton}">
+                                    <Setter Property="Margin" Value="0,3,0,0"/>
+                                </Style>
+                            </StackPanel.Resources>
+                            <RadioButton x:Name="radio_testsubjects" Checked="RadioButton_Checked" Content="Test Subject Brief" GroupName="Briefs"/>
+                            <RadioButton x:Name="radio_civil" Checked="RadioButton_Checked" Content="Civil Brief" GroupName="Briefs"/>
+                            <RadioButton x:Name="radio_security" Checked="RadioButton_Checked" Content="Security Brief" GroupName="Briefs" RenderTransformOrigin="0.5,0.5"/>
+                        </StackPanel>
+                        <StackPanel Margin="289,8,491,441">
+                            <Label Content="Paste Delay (seconds)" HorizontalAlignment="Center"/>
+                            <Slider x:Name="slider_delay" Width="120" Minimum="1" SmallChange="0.5" AutoToolTipPlacement="TopLeft" AutoToolTipPrecision="0" />
+                        </StackPanel>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Containment Procedures">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Viewbox>
+</Window>
+
+    

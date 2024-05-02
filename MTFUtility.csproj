@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <None Remove="SCPBriefs\SCP008.txt" />
+    <None Remove="SCPBriefs\SCP106.txt" />
+    <None Remove="SCPBriefs\SCP173.txt" />
+    <None Remove="SCPBriefs\SCP310.txt" />
+    <None Remove="SCPBriefs\SCP409.txt" />
+    <None Remove="SCPBriefs\SCP457.txt" />
+    <None Remove="SCPBriefs\SCP606.txt" />
+    <None Remove="SCPBriefs\SCP914.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SCPBriefs\SCP310.txt" />
+    <EmbeddedResource Include="SCPBriefs\SCP106.txt" />
+    <EmbeddedResource Include="SCPBriefs\SCP457.txt" />
+    <EmbeddedResource Include="SCPBriefs\SCP914.txt" />
+    <EmbeddedResource Include="SCPBriefs\SCP606.txt" />
+    <EmbeddedResource Include="SCPBriefs\SCP173.txt" />
+    <EmbeddedResource Include="SCPBriefs\SCP008.txt" />
+    <EmbeddedResource Include="SCPBriefs\SCP409.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoHotkey.Interop" Version="1.0.0.1" />
+  </ItemGroup>
+
+</Project>

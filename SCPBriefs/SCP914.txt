@@ -1,0 +1,17 @@
+Listen up, Test Subjects.
+You may not touch the dial on the SCP, and may not enter either chamber without explicit permission.
+If you are altered by the SCP, you must remain against the wall unless told to do something else.
+Understood?
+
+Listen up, Civil Personnel.
+You must follow all orders given by Mobile Task Forces Operatives.
+You must remain within the chamber in the event of a containment breach, and may not attempt to leave the inner chamber.
+Instead, you are to await safety in a corner.
+You may not call Red Fox in the event of a containment breach.
+Understood?
+
+Listen up, Security Personnel.
+In the event of a containment breach, you are to terminate any remaining Class-D.
+You are also to exit the chamber and guard the exterior door to ensure there are no trespassers.
+You may not call Red Fox in the event of a containment breach.
+Understood?
