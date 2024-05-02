@@ -38,8 +38,8 @@
                         <ListBox x:Name="listbox_testsubjects" Margin="10,67,10,296"/>
                         <ListBox x:Name="listbox_civil" Margin="10,210,10,153"/>
                         <ListBox x:Name="listbox_security" Margin="10,353,10,10"/>
-                        <Button Content="Begin Brief" HorizontalAlignment="Left" Margin="177,14,0,0" VerticalAlignment="Top" Width="91" Height="41" Click="Button_Click"/>
-                        <StackPanel Margin="466,5,333,439">
+                        <Button Content="Begin Brief" HorizontalAlignment="Left" Margin="155,14,0,0" VerticalAlignment="Top" Width="91" Height="41" Click="Button_Click"/>
+                        <StackPanel Margin="434,3,365,441">
                             <StackPanel.Resources>
                                 <Style TargetType="{x:Type RadioButton}">
                                     <Setter Property="Margin" Value="0,3,0,0"/>
@@ -49,11 +49,11 @@
                             <RadioButton x:Name="radio_civil" Checked="RadioButton_Checked" Content="Civil Brief" GroupName="Briefs"/>
                             <RadioButton x:Name="radio_security" Checked="RadioButton_Checked" Content="Security Brief" GroupName="Briefs" RenderTransformOrigin="0.5,0.5"/>
                         </StackPanel>
-                        <StackPanel Margin="289,8,491,441">
+                        <StackPanel Margin="270,8,510,441">
                             <Label Content="Brief Delay (seconds)" HorizontalAlignment="Center"/>
                             <Slider x:Name="slider_delay" Width="120" Minimum="1" SmallChange="0.5" AutoToolTipPlacement="TopLeft" AutoToolTipPrecision="0" />
                         </StackPanel>
-                        <CheckBox x:Name="chkbox_paste" Content="Use Copy and Paste? (faster, recommended)" HorizontalAlignment="Left" Margin="614,27,0,0" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="chkbox_paste" Content="Use Copy and Paste? (faster, recommended)" HorizontalAlignment="Left" Margin="580,27,0,0" VerticalAlignment="Top"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Containment Procedures">
