@@ -16,7 +16,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+    <None Remove="SCPBriefs\ClassifiedInterrogation.txt" />
+    <None Remove="SCPBriefs\HCZ.txt" />
+    <None Remove="SCPBriefs\NonClassifiedInterrogation.txt" />
+    <None Remove="SCPBriefs\Scanners.txt" />
     <None Remove="SCPBriefs\SCP008.txt" />
+    <None Remove="SCPBriefs\SCP096.txt" />
     <None Remove="SCPBriefs\SCP106.txt" />
     <None Remove="SCPBriefs\SCP173.txt" />
     <None Remove="SCPBriefs\SCP310.txt" />
@@ -24,9 +29,16 @@
     <None Remove="SCPBriefs\SCP457.txt" />
     <None Remove="SCPBriefs\SCP606.txt" />
     <None Remove="SCPBriefs\SCP914.txt" />
+    <None Remove="SCPBriefs\TSTA.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="SCPBriefs\SCP096.txt" />
+    <EmbeddedResource Include="SCPBriefs\TSTA.txt" />
+    <EmbeddedResource Include="SCPBriefs\Scanners.txt" />
+    <EmbeddedResource Include="SCPBriefs\HCZ.txt" />
+    <EmbeddedResource Include="SCPBriefs\ClassifiedInterrogation.txt" />
+    <EmbeddedResource Include="SCPBriefs\NonClassifiedInterrogation.txt" />
     <EmbeddedResource Include="SCPBriefs\SCP310.txt" />
     <EmbeddedResource Include="SCPBriefs\SCP106.txt" />
     <EmbeddedResource Include="SCPBriefs\SCP457.txt" />

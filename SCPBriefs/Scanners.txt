@@ -1,0 +1,6 @@
+You are not to attempt to run away from security personel or the host.
+You are not to attempt to breach any SCPs.
+You are only to speak when spoken to.
+You are to follow all instructions provided by security personel or the host.
+Failure to comply with these instructions will result in termination after two warnings.
+Is this understood?

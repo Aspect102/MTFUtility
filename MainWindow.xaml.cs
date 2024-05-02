@@ -11,7 +11,7 @@ using RadioButton = System.Windows.Controls.RadioButton;
 
 namespace MTFUtility
 {
-    /// <summary>
+    /// <summary>\
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
@@ -137,7 +137,7 @@ namespace MTFUtility
                             break;
 
                         case (> 2):
-                            MessageBox.Show("This should be impossible");
+                            MessageBox.Show("Line overflow in text file, ths should be impossible. Contact Invariem with details.");
                             break;
                     }
                 }

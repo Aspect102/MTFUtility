@@ -14,6 +14,6 @@ Listen up, Security Personnel.
 You must create a line behind the Class-D entering the chamber, ensuring not to get too close to it.
 You must remain on the second floor observation area throughout the entire test, unless going down to retrieve Class-D with assistance from Beta-7.
 In the event of a containment breach, you are to terminate all participating Class-D and exit the chamber.
-In the event of a containment breach, after terminating any remaining Class-D you are to exit the chamber and guard the exterior door to ensure there are no trespassers.
+After exiting the chamber, you are to guard the exterior door to ensure there are no trespassers.
 You may not call Red Fox in the event of a containment breach.
 Understood?

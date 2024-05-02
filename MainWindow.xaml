@@ -15,9 +15,7 @@
             <Label Content="Mobile Task Force: Beta-7 Utility Tool" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="257" Height="33" FontWeight="Bold" FontSize="14"/>
             <TabControl Margin="0,51,0,0" Grid.RowSpan="2">
                 <TabItem Header="Testing Checker">
-                    <Grid Background="#FFE5E5E5">
-                        <Button Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="27" Width="151" Click="Button_Click_1"/>
-                    </Grid>
+                    <Grid Background="#FFE5E5E5"/>
                 </TabItem>
                 <TabItem Header="SCP Briefs">
                     <Grid Background="#FFE5E5E5">
@@ -31,6 +29,11 @@
                             <ComboBoxItem Content="SCP-457" Name="SCP457"/>
                             <ComboBoxItem Content="SCP-106" Name="SCP106"/>
                             <ComboBoxItem Content="SCP-096" Name="SCP096"/>
+                            <ComboBoxItem Content="Scanners" Name="Scanners"/>
+                            <ComboBoxItem Content="HCZ" Name="HCZ"/>
+                            <ComboBoxItem Content="TSTA" Name="TSTA"/>
+                            <ComboBoxItem Content="Non-Classified Interogation" Name="NonClassifiedInterrogation"/>
+                            <ComboBoxItem Content="Classified Interorgation" Name="ClassifiedInterrogation"/>
                         </ComboBox>
                         <ListBox x:Name="listbox_testsubjects" Margin="10,67,10,296"/>
                         <ListBox x:Name="listbox_civil" Margin="10,210,10,153"/>

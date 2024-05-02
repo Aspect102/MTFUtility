@@ -1,0 +1,13 @@
+Test Subjects, listen up.
+You are about to partake in a test within the HCZ, listen very closely to the regulations that will be set in place for you.
+You are to maintain a single file line at all times while being escorted through the HCZ, and may not make any attempt to break the formation or stray from the escort.
+You are to follow all orders given to you by the researcher or their escorts. 
+Failure to do so will result in your immediate termination.
+Understood?
+
+Civil Personnel, Listen up.
+You are about to host a test within the HCZ, listen very closely to the regulations that will be set in place for you.
+In the event of a containment breach you are to exit the HCZ immediately.
+You are not to notify other personnel onsite of a Red Fox.
+Failure to do so will result in immediate termination.
+Understood?
