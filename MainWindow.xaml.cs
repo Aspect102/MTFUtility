@@ -8,6 +8,7 @@ using ListBox = System.Windows.Controls.ListBox;
 using MessageBox = System.Windows.MessageBox;
 using AutoHotkey.Interop;
 using RadioButton = System.Windows.Controls.RadioButton;
+using Clipboard = System.Windows.Clipboard;
 
 namespace MTFUtility
 {
@@ -52,7 +53,12 @@ namespace MTFUtility
                             Thread.Sleep((int)(delay * 1000) / 3);
                             SendKeys.SendWait("/");
                             Thread.Sleep((int)(delay * 1000) / 3);
-                            SendKeys.SendWait(testSubjects.Items[i].ToString());
+                            if (chkbox_paste.IsChecked == true)
+                            {
+                                Clipboard.SetDataObject(testSubjects.Items[i].ToString());
+                                SendKeys.SendWait("^(V)");
+                            }
+                            else SendKeys.SendWait(testSubjects.Items[i].ToString());
                             Thread.Sleep((int)(delay * 1000) / 3);
                             ahk.ExecRaw("Send, {enter}");
                         }
@@ -63,7 +69,12 @@ namespace MTFUtility
                             Thread.Sleep((int)(delay * 1000) / 3);
                             SendKeys.SendWait("/");
                             Thread.Sleep((int)(delay * 1000) / 3);
-                            SendKeys.SendWait(civil.Items[i].ToString());
+                            if (chkbox_paste.IsChecked == true)
+                            {
+                                Clipboard.SetDataObject(civil.Items[i].ToString());
+                                SendKeys.SendWait("^(V)");
+                            }
+                            else SendKeys.SendWait(civil.Items[i].ToString());
                             Thread.Sleep((int)(delay * 1000) / 3);
                             ahk.ExecRaw("Send, {enter}");
                         }
@@ -74,7 +85,12 @@ namespace MTFUtility
                             Thread.Sleep((int)(delay * 1000) / 3);
                             SendKeys.SendWait("/");
                             Thread.Sleep((int)(delay * 1000) / 3);
-                            SendKeys.SendWait(security.Items[i].ToString());
+                            if (chkbox_paste.IsChecked == true)
+                            {
+                                Clipboard.SetDataObject(security.Items[i].ToString());
+                                SendKeys.SendWait("^(V)");
+                            }
+                            else SendKeys.SendWait(security.Items[i].ToString());
                             Thread.Sleep((int)(delay * 1000) / 3);
                             ahk.ExecRaw("Send, {enter}");
                         }
@@ -88,10 +104,6 @@ namespace MTFUtility
                 MessageBox.Show("ROBLOX not detected. Please ensure roblox is running before attempting to paste, or contact discord: Invariem");
             }
         }
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -99,8 +111,6 @@ namespace MTFUtility
             string selectedName = selectedItem.Name;
             PopulateFields(selectedName);
         }
-
-
 
         private void PopulateFields(string selectedName)
         {
