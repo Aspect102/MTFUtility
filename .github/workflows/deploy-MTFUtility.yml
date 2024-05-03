@@ -3,7 +3,7 @@ name: "Deploy MTF Utlity"
 on:
   push:
     tags:
-      - "class-commands/v*"
+      - "MTFUtility/v*"
 
 env:
   PROJECT_PATH: MTFUtility.csproj
