@@ -6,7 +6,7 @@ on:
       - "MTFUtility/v*"
 
 env:
-  PROJECT_PATH: MTFUtility.csproj
+  PROJECT_PATH: MTFUtility/MTFUtility.csproj
 
 jobs:
   deploy:
