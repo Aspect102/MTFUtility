@@ -112,6 +112,7 @@ namespace MTFUtility
             PopulateFields(selectedName);
         }
 
+        // populates fields wow
         private void PopulateFields(string selectedName)
         {
             try
