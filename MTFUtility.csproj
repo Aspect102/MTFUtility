@@ -37,6 +37,13 @@
 	</Target>
 
 	<ItemGroup>
+	  <Compile Remove="Deployment\**" />
+	  <EmbeddedResource Remove="Deployment\**" />
+	  <None Remove="Deployment\**" />
+	  <Page Remove="Deployment\**" />
+	</ItemGroup>
+
+	<ItemGroup>
     <None Remove="nuget.exe" />
     <None Remove="SCPBriefs\ClassifiedInterrogation.txt" />
     <None Remove="SCPBriefs\HCZ.txt" />
