@@ -193,11 +193,11 @@ namespace MTFUtility
             else btn_Update.IsEnabled = false;
         }
 
-        private async void btn_Update_Click(object sender, RoutedEventArgs e)
+    private async void btn_Update_Click(object sender, RoutedEventArgs e)
         {
             await manager.UpdateApp();
 
             MessageBox.Show("Updated successfully.");
         }
-    }
+}
 }
