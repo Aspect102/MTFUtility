@@ -9,6 +9,7 @@ using MessageBox = System.Windows.MessageBox;
 using AutoHotkey.Interop;
 using RadioButton = System.Windows.Controls.RadioButton;
 using Clipboard = System.Windows.Clipboard;
+using Squirrel;
 
 namespace MTFUtility
 {
@@ -26,10 +27,21 @@ namespace MTFUtility
 
         private AutoHotkeyEngine ahk = AutoHotkeyEngine.Instance;
 
+        UpdateManager manager;
+
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += MainWindow_Loaded;
         }
+
+        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/Aspect102/MTFUtility");
+
+            txtbox_CurrentVersion.Text = manager.CurrentlyInstalledVersion().ToString();
+        }
+
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             selectedRadioButton = sender as RadioButton;
@@ -171,6 +183,21 @@ namespace MTFUtility
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             PasteIntoRoblox(slider_delay.Value, listbox_testsubjects, listbox_civil, listbox_security);
+        }
+
+        private async void btn_CheckForUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            var updateInfo = await manager.CheckForUpdate();
+
+            if (updateInfo.ReleasesToApply.Count > 0) btn_Update.IsEnabled = true;
+            else btn_Update.IsEnabled = false;
+        }
+
+        private async void btn_Update_Click(object sender, RoutedEventArgs e)
+        {
+            await manager.UpdateApp();
+
+            MessageBox.Show("Updated successfully.");
         }
     }
 }

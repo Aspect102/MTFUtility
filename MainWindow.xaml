@@ -60,6 +60,11 @@
                     <Grid Background="#FFE5E5E5"/>
                 </TabItem>
             </TabControl>
+            <StackPanel Margin="322,0,0,0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtbox_CurrentVersion" TextWrapping="Wrap" Text="Current Version" IsReadOnly="True" TextAlignment="Center" Margin="335,4,511,33"/>
+            <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Current Version" Margin="335,22,511,4"/>
+            <Button x:Name="btn_CheckForUpdates" Content="Check for Updates" Margin="441,3,392,32" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btn_CheckForUpdate_Click"/>
+            <Button x:Name="btn_Update" Content="Update" Margin="443,28,394,0" VerticalAlignment="Top" Click="btn_Update_Click"/>
         </Grid>
     </Viewbox>
 </Window>
