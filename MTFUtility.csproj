@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+	<PropertyGroup>
+		<StartupObject>MTFUtility.Program</StartupObject>
+	</PropertyGroup>
+
+	<PropertyGroup>
 	<RuntimeIdentifier>win-x64</RuntimeIdentifier>
 	<OutputType>WinExe</OutputType>
 	<TargetFramework>net8.0-windows</TargetFramework>
@@ -10,38 +14,14 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
+	<Version>1.0.0</Version>
+	
 	<PropertyGroup>
 		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
 		<TargetFramework>net6.0-windows</TargetFramework>
 		<UseWPF>true</UseWPF>
 		<UseWindowsForms>true</UseWindowsForms>
 	</PropertyGroup>
-
-	<PropertyGroup>
-		<NugetTools>$(PkgNuGet_CommandLine)\tools</NugetTools>
-		<SquirrelTools>$(Pkgsquirrel_windows)\tools</SquirrelTools>
-
-		<Version>1.0.0</Version>
-
-		<NuspecFile>$(SolutionDir)ReleaseSpec.nuspec</NuspecFile>
-	</PropertyGroup>
-
-	<Target Name="GenerateRelease" AfterTargets="AfterBuild" Condition="$(Configuration) == Release">
-		<XmlPeek XmlInputPath="$(NuspecFile)" Query="/package/metadata/id/text()">
-			<Output TaskParameter="Result" ItemName="ID" />
-		</XmlPeek>
-
-		<Exec Command="$(NugetTools)\NuGet.exe pack $(NuspecFile) -Version $(Version) -Properties Configuration=Release -OutputDirectory $(SolutionDir)Deployment\GeneratedNugets" />
-
-		<Exec Command="$(SquirrelTools)\Squirrel.exe --releasify $(SolutionDir)Deployment\GeneratedNugets\@(ID).$(Version).nupkg --releaseDir=$(SolutionDir)Deployment\Releases" />
-	</Target>
-
-	<ItemGroup>
-	  <Compile Remove="Deployment\**" />
-	  <EmbeddedResource Remove="Deployment\**" />
-	  <None Remove="Deployment\**" />
-	  <Page Remove="Deployment\**" />
-	</ItemGroup>
 
 	<ItemGroup>
     <None Remove="nuget.exe" />
@@ -84,7 +64,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="squirrel.windows" Version="1.9.0" />
+    <PackageReference Include="squirrel.windows" Version="2.0.1" />
+    <PackageReference Include="Velopack" Version="0.0.359" />
   </ItemGroup>
 
 </Project>

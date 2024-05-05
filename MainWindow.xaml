@@ -61,10 +61,10 @@
                 </TabItem>
             </TabControl>
             <StackPanel Margin="322,0,0,0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <TextBox x:Name="txtbox_CurrentVersion" TextWrapping="Wrap" Text="Current Version" IsReadOnly="True" TextAlignment="Center" Margin="338,0,508,37"/>
-            <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Current Version" Margin="338,18,508,8"/>
-            <Button x:Name="btn_CheckForUpdates" Content="Check for Updates" Margin="446,-1,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btn_CheckForUpdate_Click"/>
-            <Button x:Name="btn_Update" Content="Update" Margin="446,24,391,0" VerticalAlignment="Top" Click="btn_Update_Click"/>
+            <TextBox x:Name="txtbox_CurrentVersion" TextWrapping="Wrap" Text="?" IsReadOnly="True" TextAlignment="Center" Margin="725,5,120,32"/>
+            <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="Current Version" Margin="725,23,120,3"/>
+            <Button x:Name="btn_CheckForUpdates" Content="Check for Updates" Margin="833,4,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btn_CheckForUpdate_Click"/>
+            <Button x:Name="btn_Update" Content="Update" Margin="833,29,4,0" VerticalAlignment="Top" Click="btn_Update_Click"/>
         </Grid>
     </Viewbox>
 </Window>

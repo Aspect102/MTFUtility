@@ -9,11 +9,11 @@ using MessageBox = System.Windows.MessageBox;
 using AutoHotkey.Interop;
 using RadioButton = System.Windows.Controls.RadioButton;
 using Clipboard = System.Windows.Clipboard;
-using Squirrel;
+using Velopack;
 
 namespace MTFUtility
 {
-    /// <summary>\
+    /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
@@ -27,7 +27,9 @@ namespace MTFUtility
 
         private AutoHotkeyEngine ahk = AutoHotkeyEngine.Instance;
 
-        UpdateManager manager;
+        UpdateManager mgr = new UpdateManager("https://github.com/Aspect102/MTFUtility");
+
+        UpdateInfo NewVersion;
 
         public MainWindow()
         {
@@ -37,9 +39,7 @@ namespace MTFUtility
 
         private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            manager = await UpdateManager.GitHubUpdateManager(@"https://github.com/Aspect102/MTFUtility");
-
-            txtbox_CurrentVersion.Text = manager.CurrentlyInstalledVersion().ToString();
+            if (mgr.IsInstalled) txtbox_CurrentVersion.Text = mgr.CurrentVersion.ToString() ?? "0.0.0";
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -187,17 +187,23 @@ namespace MTFUtility
 
         private async void btn_CheckForUpdate_Click(object sender, RoutedEventArgs e)
         {
-            var updateInfo = await manager.CheckForUpdate();
+            // check for new version
+            var newVersion = await mgr.CheckForUpdatesAsync();
+            if (newVersion == null) { btn_Update.IsEnabled = false; return; }
+            else btn_Update.IsEnabled = true;
 
-            if (updateInfo.ReleasesToApply.Count > 0) btn_Update.IsEnabled = true;
-            else btn_Update.IsEnabled = false;
+            NewVersion = newVersion;
         }
 
-    private async void btn_Update_Click(object sender, RoutedEventArgs e)
+        private async void btn_Update_Click(object sender, RoutedEventArgs e)
         {
-            await manager.UpdateApp();
+            // download new version
+            await mgr.DownloadUpdatesAsync(NewVersion);
 
-            MessageBox.Show("Updated successfully.");
+            // apply new updates
+            mgr.ApplyUpdatesAndRestart(NewVersion);
+
+            MessageBox.Show("Updates successfully");
         }
-}
+    }
 }
