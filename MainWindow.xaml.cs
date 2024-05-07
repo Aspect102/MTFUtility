@@ -10,9 +10,19 @@ using AutoHotkey.Interop;
 using RadioButton = System.Windows.Controls.RadioButton;
 using Clipboard = System.Windows.Clipboard;
 using Velopack;
+using Velopack.Sources;
+using Microsoft.Extensions.Logging;
 
 namespace MTFUtility
 {
+    class ConsoleLogger : ILogger
+    {
+        public IDisposable BeginScope<TState>(TState state) where TState : notnull => null;
+        public bool IsEnabled(LogLevel logLevel) => true;
+        public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+            => Console.WriteLine(formatter(state, exception));
+    }
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -27,7 +37,7 @@ namespace MTFUtility
 
         private AutoHotkeyEngine ahk = AutoHotkeyEngine.Instance;
 
-        UpdateManager mgr = new UpdateManager("https://github.com/Aspect102/MTFUtility");
+        UpdateManager mgr = new UpdateManager(new GithubSource("https://github.com/Aspect102/MTFUtility", null, false), logger: new ConsoleLogger());
 
         UpdateInfo NewVersion;
 
