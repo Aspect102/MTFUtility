@@ -1,7 +1,5 @@
 ﻿namespace MTFUtility
 {
-    //ceri test
-
     class Testing
     {
         
