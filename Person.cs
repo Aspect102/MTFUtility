@@ -1,11 +1,6 @@
 ﻿namespace MTFUtility
 {
-    public class Test
-    {
-
-    }
-
-    #region Person
+    
 
     public class Person
     {
@@ -25,6 +20,8 @@
 
         public Person(Levels level) => Level = level;
 
+        #region shit code
+
         //public static Person GetPerson(Department department, Levels level, object? rank = null)
         //{
         //    int rankNum = rank is int ? (int)rank : 0;
@@ -41,7 +38,11 @@
         //        _ => new Person(level, rankNum)
         //    };
         //}
+
+        #endregion
     }
+
+    #region People
 
     public class Scientist : Person
     {
